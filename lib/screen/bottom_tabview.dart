@@ -2,8 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:tranquil_mind/common/color_extension.dart';
 import 'package:tranquil_mind/screen/home/home_screen.dart';
 import 'package:tranquil_mind/screen/inspirational_quotes/quotes_screen.dart';
+import 'package:tranquil_mind/screen/profile_page/profile_screen.dart';
 import '../common_widget/tab_buttons.dart';
 import 'breathing_exersice/breathing_screen.dart';
+import 'meditation/meditation_screen.dart';
 
 class BottomTabView extends StatefulWidget {
   const BottomTabView({Key? key}) : super(key: key);
@@ -35,9 +37,9 @@ class _BottomTabViewState extends State<BottomTabView> with SingleTickerProvider
         children: [
           homeScreen(),
           BreathingScreen(),
-          Container(color: Colors.yellow,),
+          MeditationScreen(),
           QuotesScreen(),
-          Container(color: Colors.red,)
+          UserProfilePage(userName: '', meditationProgress:null, breathingProgress: null,),
         ],
       ),
       bottomNavigationBar: Container(
@@ -62,7 +64,7 @@ class _BottomTabViewState extends State<BottomTabView> with SingleTickerProvider
               ),
               TabButton(
                 iconData: Icons.air,
-                title: "Breathe",
+                title: "Breath",
                 isSelect: selectTab == 1,
                 onPressed: () {
                   changeTab(1);

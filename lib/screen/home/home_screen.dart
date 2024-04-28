@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 
 import '../../common/color_extension.dart';
+import '../meditation/meditation_screen.dart';
+import '../bottom_tabview.dart';
+
 
 class homeScreen extends StatefulWidget {
   const homeScreen({super.key});
@@ -59,7 +62,7 @@ class _homeScreenState extends State<homeScreen> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 const SizedBox(height: 5,),
-                Text("Breathe in. Breathe out. Let's meditate together",
+                Text("Breath in. Breath out. Let's meditate together",
                   style: TextStyle(
                     color: Tcolor.primaryText,
                     fontSize: 24,
@@ -128,7 +131,9 @@ class _homeScreenState extends State<homeScreen> {
                                           ),
                                         ),
                                         InkWell(
-                                          onTap: () {},
+                                          onTap: () {
+                                            context.push(const MeditationScreen());
+                                          },
                                           child: Container(
                                             decoration: BoxDecoration(
                                               color: Tcolor.primaryTextW,
@@ -210,7 +215,9 @@ class _homeScreenState extends State<homeScreen> {
                                           ),
                                         ),
                                         InkWell(
-                                          onTap: () {},
+                                          onTap: () {
+                                            context.push(const MeditationScreen());
+                                          },
                                           child: Container(
                                             decoration: BoxDecoration(
                                               color: Tcolor.primaryTextW,
@@ -280,7 +287,9 @@ class _homeScreenState extends State<homeScreen> {
                               ),
                             ),
                             InkWell(
-                              onTap: () {},
+                              onTap: () {
+                               context.push(const MeditationScreen());
+                              },
                               child: Icon(
                                 Icons.play_circle_filled,
                                 size: 40,

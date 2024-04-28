@@ -25,10 +25,10 @@ class _QuotesScreenState extends State<QuotesScreen> {
     return SafeArea(
         child: Scaffold(
           appBar: AppBar(
-            backgroundColor: Color(0xffa3c0ba),
+            backgroundColor: Colors.teal[600],
             elevation: 0,
             title: Text(
-              "Daily Inspirations",
+              "Tranquil Inspirations",
               style: TextStyle(
                 color: Colors.white,
                 fontWeight: FontWeight.w700,

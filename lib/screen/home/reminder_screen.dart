@@ -34,7 +34,7 @@ class _reminderScreenState extends State<reminderScreen> {
         leading: IconButton(
           icon: Icon(Icons.arrow_back, color: Color(0xff718e88),),
           onPressed: () {
-            Navigator.of(context).pop();
+            Navigator.pop(context);
           },
         ),
       ),

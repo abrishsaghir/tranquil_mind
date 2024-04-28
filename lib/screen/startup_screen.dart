@@ -3,7 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:tranquil_mind/common/color_extension.dart';
 import 'package:tranquil_mind/common_widget/round_button.dart';
 import 'package:tranquil_mind/screen/home/reminder_screen.dart';
-import 'home/topic_option_screen.dart';
+import 'home/meditation_info_screen.dart';
 
 class StartupScreen extends StatefulWidget {
   const StartupScreen({super.key});
@@ -59,7 +59,7 @@ class _StartupScreenState extends State<StartupScreen> {
           const Spacer(),
 
           RoundButton(title: "LET'S BEGIN", onPressed: (){
-            context.push(const option_screen());
+            context.push(const OptionScreen());
             //context.push(const reminderScreen());
 
           }),
